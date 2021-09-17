@@ -22,7 +22,7 @@
       padding: 1em;
     }
 
-    h1 {
+    span#time {
       font-size: 2em;
       grid-column: 1 / -1;
       margin: 0;
@@ -76,14 +76,13 @@
 
 <body>
   <nav>
-    <h1>Welecom hoem</h1>
+    <span id="time"></span>
     <ul>
 
       <li>~</li>
-      <li><a href="https://www.youtube.com/">yt</a></li>
+      <li><a href="https://www.youtube.com/">youtube</a></li>
       <li><a href="https://www.instagram.com/">instagram</a></li>
       <li><a href="http://127.0.0.1:32400/web/index.html#!/">plex</a></li>
-      <li><a href="https://imgur.com/">imgur</a></li>
     </ul>
 
     <ul>
@@ -96,11 +95,20 @@
     <ul>
       <li>🎮</li>
         <li><a href="https://igg-games.com">igg-games</a></li>
-        <li><a href="https://fitgirl-repacks.site">fitgirl</a></li>
-        <li><a href="https://dodi-repacks.site">dodi</a></li>
+        <li><a href="https://fitgirl-repacks.site">fgr</a></li>
+        <li><a href="https://dodi-repacks.site">ddr</a></li>
     </ul>
   </nav>
 
-  <img src="https://i.imgur.com/vA9kHs4.png">
+  <img src="https://i.imgur.com/5JSBKqZ.png">
+
+  <script>
+    var d = new Date();
+    var n = d.toLocaleString([], {
+    hour: "2-digit",
+    minute: "2-digit",
+    timezone: "Europe/Vienna", });
+    document.getElementById("time").innerHTML = n;
+  </script>
 </body>
 </html>
